@@ -31,6 +31,8 @@ resources:
           cd iautomatedir
           gsutil cp gs://dryice-dmpoc/install-web.sh .
           /bin/sleep 10
+          sudo chmod 777 install-web.sh
+          /bin/sleep 10
           ./install-web.sh
     tags:
       items:
