@@ -25,17 +25,8 @@ resources:
         - web-server
     metadata:
       items:
-      - key: startup-script
-        value: |
-          #!/bin/bash
-          sudo su -
-          /bin/sleep 10
-          mkdir iautomatedir     
-          cd iautomatedir
-          gsutil cp gs://dryice-dmpoc/install-web.sh .
-          /bin/sleep 10
-          chmod 777 install-web.sh
-          ./install-web.sh
+      - key: startup-script-url
+        value: gs://dryice-dmpoc/install-web.sh .
 - type: compute.v1.firewall
   name: default-allow-http
   properties:
